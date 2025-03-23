@@ -25,8 +25,8 @@ go run main.go
 Перейдите в директорию cmd/agent и выполните команду:
 go run main.go
 
-# Структура проекта
-calc.go_1/
+## Структура проекта
+```calc.go_1/
 ├── cmd/
 │ ├── orchestrator/
 │ │ └── main.go
@@ -54,6 +54,7 @@ calc.go_1/
 ├── go.mod
 ├── go.sum
 └── README.md
+```
 Примеры 
 Отправьте POST-запрос на эндпоинт /api/v1/calculate с выражением для вычисления:
 
