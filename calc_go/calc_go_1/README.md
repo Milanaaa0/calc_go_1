@@ -27,26 +27,26 @@ go run main.go
 
 # Структура проекта
 calc.go_1
-cmd/
-  orchestrator/
-    main.go
-  agent/
-    main.go
-internal/
-  agent/
-    agent_test.go
-    agent.go
-  orchestrator/
-    handler.go
-    service.go
-pkg/
-  calculation/
-    calculation_test.go
-    calculation.go
-    errors.go
-go.mod
-go.sum
-README.md
+  cmd/
+    orchestrator/
+      main.go
+    agent/
+      main.go
+  internal/
+    agent/
+      agent_test.go
+      agent.go
+    orchestrator/
+      handler.go
+      service.go
+  pkg/
+    calculation/
+      calculation_test.go
+      calculation.go
+      errors.go
+  go.mod
+  go.sum
+  README.md
 
 Примеры 
 Отправьте POST-запрос на эндпоинт /api/v1/calculate с выражением для вычисления:
