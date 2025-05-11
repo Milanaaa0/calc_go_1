@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "calculatorapi/proto/calculator"; // Specifies the Go package for the generated code
+
+service CalculatorService {
+  // RPC to perform the calculation
+  rpc PerformCalculation (CalculationRequest) returns (CalculationResponse) {}
+  // RPC to check server status
+  rpc CheckStatus (StatusRequest) returns (StatusResponse) {}
+}
+
+message CalculationRequest {
+  int id = 1;
+  string operation = 2;
+  map<string, int> times = 3;
+}
+
+message CalculationResponse {
+  int32 id = 1;
+  double result = 2;
+}
+
+message StatusRequest {}
+
+message StatusResponse {
+  bool running = 1;
+  int32 maxGoroutines = 2;
+  int32 currentGoroutines = 3;
+}
